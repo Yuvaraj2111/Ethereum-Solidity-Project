@@ -5,6 +5,11 @@ const abi = [
                 "internalType": "string",
                 "name": "_password",
                 "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_code",
+                "type": "string"
             }
         ],
         "stateMutability": "nonpayable",
@@ -34,6 +39,37 @@ const abi = [
             }
         ],
         "name": "enrollStudent",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "examCode",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_no",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_mark",
+                "type": "uint256"
+            }
+        ],
+        "name": "markEntry",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -77,6 +113,35 @@ const abi = [
                 "internalType": "uint256",
                 "name": "num",
                 "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_no",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_code",
+                "type": "string"
+            }
+        ],
+        "name": "studentLogin",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
             }
         ],
         "stateMutability": "view",

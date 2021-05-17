@@ -9,10 +9,12 @@ contract Mcq{
     }
     
     Teacher public teacher;
+    string public examCode;
     
-    constructor(string memory _password){
+    constructor(string memory _password,string memory _code){
         teacher.id=msg.sender;
         teacher.password=_password;
+        examCode=_code;
     }
     
     uint _num;
@@ -34,6 +36,16 @@ contract Mcq{
         _;
     }
     
+    // Login for teacher
+    function teacherLogin(string memory _password)public view returns(bool){
+        if(keccak256(bytes(teacher.password))==keccak256(bytes(_password))){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
     // student enroll
     function enrollStudent(address _id,uint _rollno,string memory _name,string memory _course) public isTeacher{
         require(student[_rollno].rollno != _rollno,"Already enrolled this student");
@@ -46,14 +58,24 @@ contract Mcq{
         
     }
     
-    // Login for teacher
-    function teacherLogin(string memory _password)public view returns(bool){
-        if(keccak256(bytes(teacher.password))==keccak256(bytes(_password))){
-            return true;
-        }
-        else{
-            return false;
+    // student Login
+    function studentLogin(uint _no,string memory _code) public view returns(bool,string memory){
+        if(student[_no].rollno==_no){
+            if(keccak256(bytes(_code))==keccak256(bytes(examCode))){
+                return (true,"Login Successfully");
+            }else{
+                return (false,"Incorrect examCode");
+            }
+        }else{
+            return (false,"Rollno doesnot exist");
         }
     }
     
+    // student marks entry
+    function markEntry(uint _no,uint _mark)public {
+        if(student[_no].rollno==_no){
+            student[_no].mark=_mark;
+        }
+    }
+
 }

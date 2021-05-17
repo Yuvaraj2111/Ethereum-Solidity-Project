@@ -11,6 +11,11 @@
 						"internalType": "string",
 						"name": "_password",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -40,6 +45,37 @@
 					}
 				],
 				"name": "enrollStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "examCode",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_mark",
+						"type": "uint256"
+					}
+				],
+				"name": "markEntry",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -83,6 +119,35 @@
 						"internalType": "uint256",
 						"name": "num",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_no",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_code",
+						"type": "string"
+					}
+				],
+				"name": "studentLogin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -154,11 +219,11 @@
 	},
 	"sources": {
 		"Exam.sol": {
-			"keccak256": "0x69148570534c3a38200b022f19494011c2bc8d12d99ac298a5114d4d8215536f",
+			"keccak256": "0x43fe8196695792b8d2fb803459bb5acb039de3048d2f9b4f416b4201f6393c4b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://71f560baa5353dc94662bc4ecf3a4e1f929d5f2623901a2959f3f46ea120e644",
-				"dweb:/ipfs/QmZ7x2zBXRBfoNj2YArWndqPWeuieq1xNVkhou3C7eWnFB"
+				"bzz-raw://29d7ce7cc9eb0f03e4b22f7024f35a3db35602a20fe11c258598646ba7ede5e1",
+				"dweb:/ipfs/QmXE7YBEPDmMNdowzaSRrxbCN4DESpGchrALNaqB4F5q2G"
 			]
 		}
 	},
