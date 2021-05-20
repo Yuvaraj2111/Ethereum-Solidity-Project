@@ -17,7 +17,7 @@ contract Mcq{
         examCode=_code;
     }
     
-    uint _num;
+    uint _count;
     
     struct Student{
         address id;
@@ -25,7 +25,7 @@ contract Mcq{
         string name;
         string course;
         uint mark;
-        uint num;
+        uint count;
     }
     
     mapping(uint=>Student) public student; // contain list of students
@@ -53,9 +53,8 @@ contract Mcq{
         student[_rollno].id=_id;
         student[_rollno].name=_name;
         student[_rollno].course=_course;
-        _num++;
-        student[_rollno].num=_num;
-        
+        _count++;
+        student[_rollno].count=_count;
     }
     
     // student Login
