@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Local css -->
+    <link rel="stylesheet" href="./css/enroll.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!-- WEB3 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top m-3">
+        <a class="navbar-brand text-primary">Staff section</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link text-secondary aNav" href="/admin.html">Home </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-secondary aNav active" href="#">Enroll Students</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link text-secondary aNav" href="/result.html">Students Results</a>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Log out
+                    <span><i class="fas fa-sign-out-alt"></i></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>Have an account?</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <label id="label-register" for="log-reg-show">Login</label>
+        </div>
+
+        <div class="register-info-box">
+            <h4>Total Students Enrolled</h4>
+            <span><button class="btn">2</button>
+                <h4>out of 10</h4>
+            </span>
+
+        </div>
+
+        <div class="white-panel">
+            <div class="login-show">
+                <h1 class="text-primary">Enroll Student</h2>
+                    <input type="text" placeholder="Id" id="id">
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="text" placeholder="Roll no" id="rollno">
+                    <input type="text" placeholder="Course" id="course">
+                    <input type="button" value="Enroll" class="bg-primary" onclick="enrollStudent()">
+            </div>
+        </div>
+    </div>
+    <script src="js/abi.js"></script>
+    <script src="js/mainVal.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

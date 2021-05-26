@@ -16,14 +16,31 @@ const teacherLogin = async () => {
         alert("Password incorrect")
 }
 
+// Enroll Student
+const enrollStudent = async () => {
+    let id = document.getElementById('id').value
+    let name = document.getElementById('name').value
+    let rollno = document.getElementById('rollno').value
+    let course = document.getElementById('course').value
+    if (id == "" && name == "" && rollno == "" && course == "")
+        alert("You must fill all the fields")
+    else {
+        await contract.methods.enrollStudent(id, rollno, name, course).send({ from: teacherId, gas: 3000000 })
+            .then(e => alert("Rollno " + rollno + " Added successfully"))
+            .catch(e => alert("Student already enrolled"))
+    }
+}
+
 // student login
-const studentLogin = () => {
+const studentLogin = async () => {
     let rollno = document.getElementById('rollno').value
     let eCode = document.getElementById('Ecode').value
-    contract.methods.studentLogin(rollno, eCode).call().then((e) => {
+    var url = new URL("http://127.0.0.1:5500/");
+    url.searchParams.append('rollno', rollno);
+    await contract.methods.studentLogin(rollno, eCode).call().then((e) => {
         console.log(e);
         if (e[0]) {
-            window.location = "/"
+            window.location = url
         } else {
             alert(e[1])
         }

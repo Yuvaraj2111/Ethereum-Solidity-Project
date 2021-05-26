@@ -10,6 +10,10 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 
+let url = window.location.href;
+let roll = url.split('?')[1].split('=')[1];
+let rollno = parseInt(roll)
+
 // if startQuiz button clicked
 start_btn.onclick = () => {
     info_box.classList.add("activeInfo"); //show info box
@@ -145,7 +149,7 @@ function optionSelected(answer) {
     next_btn.classList.add("show"); //show the next button if user selected any option
 }
 
-function showResult() {
+async function showResult() {
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
@@ -163,6 +167,7 @@ function showResult() {
         let scoreTag = '<span>and sorry 😐, You got only <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
         scoreText.innerHTML = scoreTag;
     }
+    await contract.methods.markEntry(rollno, userScore).send({ from: teacherId, gas: 300000 })
 }
 
 // 

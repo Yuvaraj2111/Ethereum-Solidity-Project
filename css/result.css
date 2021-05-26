@@ -20,9 +20,9 @@ a{
     color: #007bff;
 }
 
-.extra{
-    height: 600px;
-    align-items: center;
-    align-self: center;
-    justify-items:center ;
+
+
+h4,p{
+   text-align: center; 
+   margin-top: 20px !important;
 }
