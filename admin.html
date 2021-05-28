@@ -42,59 +42,48 @@
                 </li>
             </ul>
             <div class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Log out
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="adminPage()">Log out
                     <span><i class="fas fa-sign-out-alt"></i></span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <div class="bg-white m-3 extra" id="home">
-        <div class="row">
-            <div class="col m-5 ">
-                <img class="ml-5" style="border-radius: 50%;"
-                    src="https://www.worldofmobileapps.co/wp-content/uploads/2017/10/512x512-1.png" height="250"
-                    width="250" alt="">
-                <h5 class="font-weight-bolder homeTitle text-center mt-4 mr-5">Ethereum Quiz app</p>
-                    <p></p>
+    <div class="bg-white row m-3 extra " id="home">
+        <div class="col-3 bg-secondary forheight text-center">
+            <div class="forMargin">
+                <h4 class="text-light">Dr.SIVA</h4>
+                <p class="text-light">MCA</p>
+                <p class="text-light">2nd year</p>
+                <p class="text-light">TOTAL NUMBER OF STUDENTS</p>
+                <Button class="btn btn-light count" onclick="totalStudent()"></Button>
             </div>
-            <div class="col mt-5">
-                <div class="form-group">
-                    <label for="" class="homeTitle">Title</label>
-                    <p class="w-50 ml-4 " name="qTitle" id="qTitle" rows="3">Solidity</p>
-                    <label for="" class="homeTitle">Description</label>
-                    <p class="w-50 ml-4 " name="qDesc" id="qDesc" rows="3">This quiz deals with the Basics of Solidity
-                        Compiler and language in the syllabus</p>
+        </div>
+        <div class="col forheight">
+            <h2 class="text-secondary m-4">ENROLLED STUDENTS</h2>
+            <div class="row m-5 text-center">
+                <div class="col rollno">
+                    <h5>ROLL NO</h5>
                 </div>
-            </div>
-            <div class="col m-5">
-                <div class="form-group">
-                    <label for="" class="homeTitle"> Faculty Name</label>
-                    <p class="w-50 ml-4 " name="fName" id="fName" rows="3">Sweetlin</p>
+                <div class="col name">
+                    <h5>NAME</h5>
                 </div>
-                <div class="form-group">
-                    <label for="" class="homeTitle"> Course</label>
-                    <p class=" w-50 ml-4" name="fName" id="fName" rows="3">BlockChain</p>
+                <div class="col course">
+                    <h5>COURSE</h5>
                 </div>
-                <div class="form-group">
-                    <label for="" class="homeTitle"> Course Code</label>
-                    <p class=" w-50 ml-4" name="fName" id="fName" rows="3">CA5001</p>
+                <div class="col courseCode">
+                    <h5>COURSE CODE</h5>
                 </div>
-                <div class="form-group">
-                    <label for="" class="homeTitle"> Total students Enrolled </label>
-                    <p class=" w-50 ml-4" name="fName" id="fName" rows="3">21</p>
-                </div>
-
             </div>
         </div>
 
     </div>
-    <div class="bg-white m-3" id="enroll">
-
-    </div>
 
 
-
+    <!-- Main validation -->
+    <script src="js/abi.js"></script>
+    <script src="js/mainVal.js"></script>
+    <script src="js/studentDetail.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

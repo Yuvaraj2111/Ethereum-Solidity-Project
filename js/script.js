@@ -67,6 +67,7 @@ restart_quiz.onclick = () => {
 // if quitQuiz button clicked
 quit_quiz.onclick = () => {
     window.location.reload(); //reload the current window
+    window.location = "/studentLogin.html"
 }
 
 const next_btn = document.querySelector("footer .next_btn");

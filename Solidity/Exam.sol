@@ -17,7 +17,7 @@ contract Mcq{
         examCode=_code;
     }
     
-    uint _count;
+    uint public _count;
     
     struct Student{
         address id;
@@ -38,8 +38,13 @@ contract Mcq{
     
     // Login for teacher
     function teacherLogin(string memory _password)public view returns(bool){
+        if(teacher.id==msg.sender){
         if(keccak256(bytes(teacher.password))==keccak256(bytes(_password))){
             return true;
+        }
+        else{
+            return false;
+        }
         }
         else{
             return false;
@@ -54,7 +59,6 @@ contract Mcq{
         student[_rollno].name=_name;
         student[_rollno].course=_course;
         _count++;
-        student[_rollno].count=_count;
     }
     
     // student Login

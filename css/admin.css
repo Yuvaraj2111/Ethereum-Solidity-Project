@@ -15,14 +15,19 @@ a{
     font-weight: bolder;    
 }
 
-.homeTitle{
-    font-weight: bolder;
+h5{
     color: #007bff;
 }
 
-.extra{
+p{
+    font-weight: bolder;
+}
+
+.forheight{
+    font-weight: bolder !important;
     height: 600px;
-    align-items: center;
-    align-self: center;
-    justify-items:center ;
+}
+
+.forMargin{
+    margin-top: 150px;
 }

@@ -22,6 +22,19 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "_count",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -219,11 +232,11 @@
 	},
 	"sources": {
 		"Exam.sol": {
-			"keccak256": "0xd069572e9ed59319f8e824538afb0065936aae67e7ec14087dff0f5370c8f054",
+			"keccak256": "0xf19848de8a47edd98cd0b1c0ebd3a23817d2a5b433239b4bc6d48377074b7bb1",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6cd9f3b8a67f95e9fa2757c83bf1b7ab7eecc9c0d5db6addc1f868cccdf8bfe9",
-				"dweb:/ipfs/QmepvaF7fCVodPX2JTXAbrWWjfwHtNU7QJPD2rkt3L15Pa"
+				"bzz-raw://c5f73a5afe1e05863044cd16acfab0be579d632e08ba6c3644905cfa89ac7ab6",
+				"dweb:/ipfs/QmVAAnz8CNFtGeX11j17tG8xajrr2wY6nnuu47DTwF57qD"
 			]
 		}
 	},

@@ -1,60 +1,61 @@
 // creating an array and passing the number, questions, options, and answers
 let questions = [
-    {
+  {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Who created Bitcoin?",
+    answer: "Satoshi Nakamoto",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "Satoshi Nakamoto",
+      "Samsung",
+      "John Mcafee",
+      "China"
     ]
   },
-    {
+  {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "What is a miner?",
+    answer: "Computers that validate and process blockchain transactions",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "An algorithm that predicts the next part of the chain",
+      "A type of blockchain",
+      "A person doing calculations to verify a transaction",
+      "Computers that validate and process blockchain transactions"
     ]
   },
-    {
+  {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "What is a blockchain?",
+    answer: "A distributed ledger on a peer to peer network",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "A distributed ledger on a peer to peer network",
+      "A type of cryptocurrency",
+      "An exchange",
+      "A centralized ledger"
     ]
   },
-    {
+  {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "What is a dApp?",
+    answer: "A decentralized application",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "A type of Cryptocurrency",
+      "A condiment",
+      "A type of blockchain",
+      "A decentralized application"
     ]
   },
-    {
+  {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "What is the term for when a blockchain splits?",
+    answer: "A fork",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "A fork",
+      "A merger",
+      "A sidechain",
+      "A division"
     ]
   },
+  
   // you can uncomment the below codes and make duplicate as more as you want to add question
   // but remember you need to give the numb value serialize like 1,2,3,5,6,7,8,9.....
 
