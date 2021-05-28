@@ -3,7 +3,8 @@ const score = document.querySelector(".score");
 const name = document.querySelector(".name");
 const result = document.querySelector(".result");
 
-for (let i = 1; i < 10; i++) {
+// show result r show student details
+for (let i = 1; i < 100; i++) {
     contract.methods.student(i).call().then((e) => {
         if (e.rollno != 0 && e.rollno != "") {
             rollno.innerHTML += "<p>" + e.rollno + "</p>"
@@ -17,3 +18,5 @@ for (let i = 1; i < 10; i++) {
         }
     })
 }
+
+
